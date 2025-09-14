@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vulnerability Assessment Report | Mahmoud Tamer</title>
+    <meta
+      name="description"
+      content="Comprehensive security assessment of a corporate network environment with detailed findings and remediation strategies."
+    />
+    <meta
+      property="og:title"
+      content="Vulnerability Assessment Report | Mahmoud Tamer"
+    />
+    <meta
+      property="og:description"
+      content="Comprehensive security assessment of a corporate network environment with detailed findings and remediation strategies."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://mahmoudtamerali.github.io/projects/project1.html"
+    />
+    <meta
+      property="og:image"
+      content="https://picsum.photos/seed/vulnerability/1200/630.jpg"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="container nav-container">
+        <a href="/" class="logo" aria-label="Mahmoud Tamer Home">MT</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/#home" class="nav-link">Home</a></li>
+          <li><a href="/#about" class="nav-link">About</a></li>
+          <li><a href="/#skills" class="nav-link">Skills</a></li>
+          <li>
+            <a href="/#featured-projects" class="nav-link active">Projects</a>
+          </li>
+          <li><a href="/#featured-labs" class="nav-link">Labs</a></li>
+          <li>
+            <a href="/#certificates" class="nav-link">Certificates</a>
+          </li>
+          <li><a href="/#writeups" class="nav-link">Writeups</a></li>
+          <li><a href="/#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+      <div class="container project-header-content">
+        <div class="project-header-text">
+          <h1>Vulnerability Assessment Report</h1>
+          <p>
+            Comprehensive security assessment of a corporate network environment
+            with detailed findings and remediation strategies.
+          </p>
+          <div class="project-meta">
+            <span class="project-category">Network Security</span>
+            <span class="project-date">June 2023</span>
+          </div>
+          <div class="project-links-header">
+            <a
+              href="https://github.com/mahmoudtamerali/vulnerability-assessment"
+              target="_blank"
+              class="btn"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+          </div>
+        </div>
+        <div class="project-header-image">
+          <img
+            src="https://picsum.photos/seed/vulnerability/600/400.jpg"
+            alt="Vulnerability assessment project"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- Project Detail Section -->
+    <main id="main-content" class="project-detail">
+      <div class="container">
+        <div class="project-detail-grid">
+          <div class="project-main-content">
+            <section class="project-section">
+              <h2>Project Overview</h2>
+              <p>
+                This project involved conducting a comprehensive vulnerability
+                assessment for a medium-sized corporate network. The assessment
+                aimed to identify security weaknesses, prioritize risks, and
+                provide actionable remediation strategies to enhance the
+                organization's security posture.
+              </p>
+              <p>
+                The scope included all network infrastructure, servers,
+                workstations, and web applications within the corporate
+                environment. The assessment followed industry-standard
+                methodologies and frameworks, including NIST SP 800-115 and
+                OWASP Testing Guide.
+              </p>
+            </section>
+
+            <section class="project-section">
+              <h2>Methodology</h2>
+              <p>The vulnerability assessment was conducted in four phases:</p>
+              <ol>
+                <li>
+                  <strong>Planning and Scoping:</strong> Defined the assessment
+                  boundaries, objectives, and rules of engagement.
+                </li>
+                <li>
+                  <strong>Discovery and Enumeration:</strong> Identified all
+                  assets within the scope and mapped the network topology.
+                </li>
+                <li>
+                  <strong>Vulnerability Identification:</strong> Used automated
+                  scanning tools and manual techniques to identify
+                  vulnerabilities.
+                </li>
+                <li>
+                  <strong>Analysis and Reporting:</strong> Analyzed findings,
+                  assigned risk ratings, and developed remediation
+                  recommendations.
+                </li>
+              </ol>
+              <p>
+                Throughout the assessment, I maintained detailed documentation
+                of all activities, findings, and recommendations to ensure
+                transparency and traceability.
+              </p>
+            </section>
+
+            <section class="project-section">
+              <h2>Key Findings</h2>
+              <p>
+                The assessment identified 47 vulnerabilities across the network
+                infrastructure and applications. These were categorized by
+                severity:
+              </p>
+              <ul>
+                <li>
+                  <strong>Critical (5):</strong> Vulnerabilities that could lead
+                  to complete system compromise.
+                </li>
+                <li>
+                  <strong>High (12):</strong> Vulnerabilities that could lead to
+                  significant data exposure or service disruption.
+                </li>
+                <li>
+                  <strong>Medium (18):</strong> Vulnerabilities that could be
+                  exploited with moderate effort.
+                </li>
+                <li>
+                  <strong>Low (12):</strong> Vulnerabilities with minimal impact
+                  or requiring specialized conditions to exploit.
+                </li>
+              </ul>
+              <p>
+                The most critical findings included unpatched remote code
+                execution vulnerabilities in public-facing servers,
+                misconfigured cloud storage buckets exposing sensitive data, and
+                weak authentication mechanisms in critical applications.
+              </p>
+            </section>
+
+            <section class="project-section">
+              <h2>Remediation Strategies</h2>
+              <p>
+                For each identified vulnerability, I provided detailed
+                remediation guidance including:
+              </p>
+              <ul>
+                <li>Step-by-step instructions for fixing the vulnerability</li>
+                <li>
+                  Recommended timelines for implementation based on risk level
+                </li>
+                <li>Verification steps to confirm successful remediation</li>
+                <li>
+                  Compensatory controls for vulnerabilities that could not be
+                  immediately patched
+                </li>
+              </ul>
+              <p>
+                I also developed a prioritized remediation plan that addressed
+                critical vulnerabilities first while considering operational
+                constraints and business requirements.
+              </p>
+            </section>
+
+            <section class="project-section">
+              <h2>Results</h2>
+              <p>
+                Following the implementation of the remediation plan, a
+                follow-up assessment was conducted to verify the effectiveness
+                of the security measures. The results showed:
+              </p>
+              <ul>
+                <li>
+                  100% of critical vulnerabilities were successfully remediated
+                </li>
+                <li>92% of high-severity vulnerabilities were addressed</li>
+                <li>
+                  Overall security posture improved by 78% based on risk scoring
+                </li>
+                <li>
+                  Security awareness among IT staff increased significantly
+                </li>
+              </ul>
+              <p>
+                The organization also implemented several of my recommended
+                long-term security improvements, including establishing a
+                vulnerability management program and enhancing their security
+                monitoring capabilities.
+              </p>
+            </section>
+          </div>
+
+          <aside class="project-sidebar">
+            <div class="sidebar-section">
+              <h3>Project Details</h3>
+              <ul class="project-details-list">
+                <li>
+                  <span class="detail-label">Client:</span>
+                  <span class="detail-value">Confidential</span>
+                </li>
+                <li>
+                  <span class="detail-label">Duration:</span>
+                  <span class="detail-value">3 weeks</span>
+                </li>
+                <li>
+                  <span class="detail-label">Team Size:</span>
+                  <span class="detail-value">3 members</span>
+                </li>
+                <li>
+                  <span class="detail-label">Role:</span>
+                  <span class="detail-value">Lead Penetration Tester</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Technologies Used</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Nmap</span>
+                <span class="tech-tag">Nessus</span>
+                <span class="tech-tag">Metasploit</span>
+                <span class="tech-tag">Burp Suite</span>
+                <span class="tech-tag">Wireshark</span>
+              </div>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Project Gallery</h3>
+              <div class="project-gallery">
+                <img
+                  src="https://picsum.photos/seed/vuln1/300/200.jpg"
+                  alt="Vulnerability scan results"
+                  onclick="openModal(this.src)"
+                />
+                <img
+                  src="https://picsum.photos/seed/vuln2/300/200.jpg"
+                  alt="Network topology"
+                  onclick="openModal(this.src)"
+                />
+                <img
+                  src="https://picsum.photos/seed/vuln3/300/200.jpg"
+                  alt="Risk assessment chart"
+                  onclick="openModal(this.src)"
+                />
+                <img
+                  src="https://picsum.photos/seed/vuln4/300/200.jpg"
+                  alt="Remediation plan"
+                  onclick="openModal(this.src)"
+                />
+              </div>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Related Projects</h3>
+              <div class="related-projects">
+                <div class="related-project">
+                  <img
+                    src="https://picsum.photos/seed/webapp/80/80.jpg"
+                    alt="Web App Penetration Test"
+                  />
+                  <div>
+                    <h4>Web App Penetration Test</h4>
+                    <p>Full penetration test of a vulnerable web application</p>
+                  </div>
+                </div>
+                <div class="related-project">
+                  <img
+                    src="https://picsum.photos/seed/writeups/80/80.jpg"
+                    alt="CTF Writeups Collection"
+                  />
+                  <div>
+                    <h4>CTF Writeups Collection</h4>
+                    <p>Detailed solutions for various CTF challenges</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="social-links">
+          <a
+            href="https://linkedin.com/in/mahmoud-tamer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/mahmoudtamerali"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://tryhackme.com/p/mahmoud.tamer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TryHackMe"
+          >
+            <i class="fas fa-user-secret"></i>
+          </a>
+        </div>
+        <p>© 2023 Mahmoud Tamer. All rights reserved.</p>
+        <p>
+          Designed and built with
+          <i class="fas fa-heart" style="color: #e63946" aria-hidden="true"></i>
+          for cybersecurity
+        </p>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="modal"
+      onclick="closeModal()"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <button
+        class="modal-close"
+        onclick="closeModal()"
+        aria-label="Close modal"
+      >
+        &times;
+      </button>
+      <img id="modal-img" src="" alt="Certificate preview" />
+    </div>
+
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+    <script>
+      // Function to hide loading screen
+      function hideLoadingScreen() {
+        const loadingScreen = document.getElementById("loadingScreen");
+        if (loadingScreen) {
+          loadingScreen.classList.add("hidden");
+        }
+      }
+
+      // Hide loading screen when page is fully loaded
+      window.addEventListener("load", function () {
+        // Fallback: Hide loading screen after 2 seconds
+        setTimeout(hideLoadingScreen, 2000);
+
+        // Also try to hide it immediately
+        hideLoadingScreen();
+
+        // Make all sections visible
+        document.querySelectorAll("section").forEach((section) => {
+          section.classList.add("visible");
+        });
+      });
+
+      // Also hide loading screen after DOM is loaded (as a backup)
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(hideLoadingScreen, 500);
+      });
+    </script>
+  </body>
+</html>

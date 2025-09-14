@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mahmoud Tamer — Offensive Security Expert</title>
+    <meta
+      name="description"
+      content="Offensive security specialist, penetration tester, and CTF player. Final year Communications Engineering student at Cairo University."
+    />
+    <meta
+      property="og:title"
+      content="Mahmoud Tamer — Offensive Security Expert"
+    />
+    <meta
+      property="og:description"
+      content="Penetration tester, CTF player, security writeups and projects."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mahmoudtamerali.github.io/" />
+    <meta property="og:image" content="/social-preview.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      /* Added missing .hidden class for loading screen */
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader"></div>
+    </div>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="container nav-container">
+        <a href="/" class="logo" aria-label="Mahmoud Tamer Home">MT</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/#home" class="nav-link">Home</a></li>
+          <li><a href="/#about" class="nav-link">About</a></li>
+          <li><a href="/#skills" class="nav-link">Skills</a></li>
+          <li>
+            <a href="/#featured-projects" class="nav-link">Projects</a>
+          </li>
+          <li><a href="/#featured-labs" class="nav-link">Labs</a></li>
+          <li>
+            <a href="/#certificates" class="nav-link">Certificates</a>
+          </li>
+          <li><a href="/#writeups" class="nav-link">Writeups</a></li>
+          <li><a href="/#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header id="home" role="banner">
+      <div class="container hero-content" id="main-content">
+        <img
+          src="https://picsum.photos/seed/mahmoudtamer/180/180.jpg"
+          alt="Mahmoud Tamer photo"
+          class="avatar priority-load"
+        />
+        <h1>Mahmoud Tamer Ali</h1>
+        <div class="sub">
+          Offensive Security Specialist & Penetration Tester
+        </div>
+        <p>
+          Final year Communications Engineering student at Cairo University |
+          OSCP Candidate | TryHackMe Top 250 (Egypt)
+        </p>
+      </div>
+    </header>
+    <!-- About Section -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 class="section-title" id="about-heading">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate cybersecurity professional with a focus on
+              offensive security and penetration testing. My journey began
+              during my studies at Cairo University where I discovered my talent
+              for identifying vulnerabilities and securing systems.
+            </p>
+            <p>
+              With hands-on experience from TryHackMe, Hack The Box, and
+              numerous CTF competitions, I've developed expertise in web
+              application security, network penetration testing, and
+              vulnerability assessment. I believe in the "break to build"
+              philosophy - by understanding attack vectors, we can build more
+              resilient defenses.
+            </p>
+            <p>
+              Currently pursuing my OSCP certification to further validate my
+              skills and expand my knowledge in advanced penetration testing
+              techniques.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://picsum.photos/seed/cybersecurity/600/400.jpg"
+              alt="Mahmoud working on security research"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 class="section-title" id="skills-heading">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>
+              <i class="fas fa-shield-alt" aria-hidden="true"></i> Penetration
+              Testing
+            </h3>
+            <div class="skill-list">
+              <div class="skill-tag">Web App Testing</div>
+              <div class="skill-tag">Network Pentesting</div>
+              <div class="skill-tag">Social Engineering</div>
+              <div class="skill-tag">Red Teaming</div>
+              <div class="skill-tag">Vulnerability Assessment</div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>
+              <i class="fas fa-tools" aria-hidden="true"></i> Tools &
+              Technologies
+            </h3>
+            <div class="skill-list">
+              <div class="skill-tag">Burp Suite</div>
+              <div class="skill-tag">Metasploit</div>
+              <div class="skill-tag">Nmap</div>
+              <div class="skill-tag">Wireshark</div>
+              <div class="skill-tag">SQLMap</div>
+              <div class="skill-tag">John the Ripper</div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>
+              <i class="fas fa-code" aria-hidden="true"></i> Programming &
+              Scripting
+            </h3>
+            <div class="skill-list">
+              <div class="skill-tag">Python</div>
+              <div class="skill-tag">Bash</div>
+              <div class="skill-tag">PowerShell</div>
+              <div class="skill-tag">JavaScript</div>
+              <div class="skill-tag">SQL</div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>
+              <i class="fas fa-lock" aria-hidden="true"></i> Security Concepts
+            </h3>
+            <div class="skill-list">
+              <div class="skill-tag">OWASP Top 10</div>
+              <div class="skill-tag">Cryptography</div>
+              <div class="skill-tag">Network Security</div>
+              <div class="skill-tag">Incident Response</div>
+              <div class="skill-tag">Threat Modeling</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Certificates Section -->
+    <section id="certificates" aria-labelledby="certificates-heading">
+      <div class="container">
+        <h2 class="section-title" id="certificates-heading">
+          Certificates & Achievements
+        </h2>
+        <div class="certificates-grid">
+          <div class="certificate-card">
+            <img
+              src="https://picsum.photos/seed/huawei/300/200.jpg"
+              alt="Huawei HCIA certificate"
+              class="certificate-image"
+              onclick="openModal(this.src, 'Huawei HCIA Certificate')"
+              aria-label="View Huawei HCIA certificate"
+              loading="lazy"
+            />
+            <div class="certificate-name">Huawei HCIA</div>
+            <div class="certificate-issuer">Cairo University</div>
+          </div>
+          <div class="certificate-card">
+            <img
+              src="https://picsum.photos/seed/ccna/300/200.jpg"
+              alt="NTI CCNA certificate"
+              class="certificate-image"
+              onclick="openModal(this.src, 'NTI CCNA Certificate')"
+              aria-label="View NTI CCNA certificate"
+              loading="lazy"
+            />
+            <div class="certificate-name">CCNA</div>
+            <div class="certificate-issuer">
+              National Telecommunication Institute
+            </div>
+          </div>
+          <div class="certificate-card">
+            <img
+              src="https://picsum.photos/seed/siemens/300/200.jpg"
+              alt="Siemens Embedded Systems certificate"
+              class="certificate-image"
+              onclick="openModal(this.src, 'Siemens Embedded Systems Certificate')"
+              aria-label="View Siemens Embedded Systems certificate"
+              loading="lazy"
+            />
+            <div class="certificate-name">Embedded Systems</div>
+            <div class="certificate-issuer">Siemens</div>
+          </div>
+          <div class="certificate-card">
+            <img
+              src="https://picsum.photos/seed/ieee/300/200.jpg"
+              alt="IEEE Cyber Security Workshop certificate"
+              class="certificate-image"
+              onclick="openModal(this.src, 'IEEE Cyber Security Workshop Certificate')"
+              aria-label="View IEEE Cyber Security Workshop certificate"
+              loading="lazy"
+            />
+            <div class="certificate-name">Cyber Security Workshop</div>
+            <div class="certificate-issuer">IEEE CUSB</div>
+          </div>
+          <div class="certificate-card">
+            <img
+              src="https://picsum.photos/seed/nti/300/200.jpg"
+              alt="NTI Network Security certificate"
+              class="certificate-image"
+              onclick="openModal(this.src, 'NTI Network Security Certificate')"
+              aria-label="View NTI Network Security certificate"
+              loading="lazy"
+            />
+            <div class="certificate-name">Network Security</div>
+            <div class="certificate-issuer">
+              National Telecommunication Institute
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Projects Section -->
+    <section id="featured-projects" aria-labelledby="featured-projects-heading">
+      <div class="container">
+        <h2 class="section-title" id="featured-projects-heading">
+          Featured Projects
+        </h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img
+              src="https://picsum.photos/seed/vulnerability/400/200.jpg"
+              alt="Vulnerability assessment project"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-content">
+              <h3 class="project-title">Vulnerability Assessment Report</h3>
+              <p class="project-description">
+                Comprehensive security assessment of a corporate network
+                environment with detailed findings and remediation strategies.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Network Security</span>
+                <span class="project-tag">Risk Assessment</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="projects/project1.html"
+                  class="project-link"
+                  aria-label="View Vulnerability Assessment Report project"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Project
+                </a>
+                <a
+                  href="https://github.com/mahmoudtamerali/vulnerability-assessment"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link github-link"
+                  aria-label="View Vulnerability Assessment Report on GitHub"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              src="https://picsum.photos/seed/webapp/400/200.jpg"
+              alt="Web app pentest lab"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-content">
+              <h3 class="project-title">Web App Penetration Test</h3>
+              <p class="project-description">
+                Full penetration test of a vulnerable web application including
+                authentication bypass and SSRF exploitation.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Web Security</span>
+                <span class="project-tag">OWASP</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="projects/project2.html"
+                  class="project-link"
+                  aria-label="View Web App Penetration Test project"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Project
+                </a>
+                <a
+                  href="https://github.com/mahmoudtamerali/web-app-pentest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link github-link"
+                  aria-label="View Web App Penetration Test on GitHub"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              src="https://picsum.photos/seed/writeups/400/200.jpg"
+              alt="CTF writeups collection"
+              class="project-image"
+              loading="lazy"
+            />
+            <div class="project-content">
+              <h3 class="project-title">CTF Writeups Collection</h3>
+              <p class="project-description">
+                Detailed solutions and methodologies for various CTF challenges
+                covering web exploitation, cryptography, and reverse
+                engineering.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">CTF</span>
+                <span class="project-tag">Writeups</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="projects/project3.html"
+                  class="project-link"
+                  aria-label="View CTF Writeups Collection project"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Project
+                </a>
+                <a
+                  href="https://github.com/mahmoudtamerali/ctf-writeups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link github-link"
+                  aria-label="View CTF Writeups Collection on GitHub"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Labs Section -->
+    <section id="featured-labs" aria-labelledby="featured-labs-heading">
+      <div class="container">
+        <h2 class="section-title" id="featured-labs-heading">
+          Featured Security Labs
+        </h2>
+        <div class="labs-preview">
+          <div class="lab-card">
+            <img
+              src="https://picsum.photos/seed/websecurity/400/200.jpg"
+              alt="Web Application Security Lab"
+              class="lab-image"
+              loading="lazy"
+            />
+            <div class="lab-content">
+              <h3 class="lab-title">Web Application Security Lab</h3>
+              <p class="lab-description">
+                Hands-on lab environment for practicing web application
+                penetration testing techniques including SQL injection, XSS, and
+                CSRF vulnerabilities.
+              </p>
+              <div class="lab-tags">
+                <span class="lab-tag">Web Security</span>
+                <span class="lab-tag">OWASP</span>
+                <span class="lab-tag">Vulnerable Apps</span>
+              </div>
+              <div class="lab-links">
+                <a
+                  href="labs/lab1.html"
+                  class="lab-link"
+                  aria-label="View Web Application Security Lab Report"
+                >
+                  <i class="fas fa-eye"></i> View Report
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="lab-card">
+            <img
+              src="https://picsum.photos/seed/networkpentest/400/200.jpg"
+              alt="Network Penetration Testing Lab"
+              class="lab-image"
+              loading="lazy"
+            />
+            <div class="lab-content">
+              <h3 class="lab-title">Network Penetration Testing Lab</h3>
+              <p class="lab-description">
+                Complete network infrastructure setup for practicing network
+                reconnaissance, vulnerability scanning, and exploitation
+                techniques.
+              </p>
+              <div class="lab-tags">
+                <span class="lab-tag">Network Security</span>
+                <span class="lab-tag">Nmap</span>
+                <span class="lab-tag">Metasploit</span>
+              </div>
+              <div class="lab-links">
+                <a
+                  href="labs/lab2.html"
+                  class="lab-link"
+                  aria-label="View Network Penetration Testing Lab Report"
+                >
+                  <i class="fas fa-eye"></i> View Report
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="lab-card">
+            <img
+              src="https://picsum.photos/seed/ctfenv/400/200.jpg"
+              alt="CTF Challenge Environment"
+              class="lab-image"
+              loading="lazy"
+            />
+            <div class="lab-content">
+              <h3 class="lab-title">CTF Challenge Environment</h3>
+              <p class="lab-description">
+                Custom-built CTF challenges covering various categories
+                including web exploitation, cryptography, reverse engineering,
+                and forensics.
+              </p>
+              <div class="lab-tags">
+                <span class="lab-tag">CTF</span>
+                <span class="lab-tag">Cryptography</span>
+                <span class="lab-tag">Reverse Engineering</span>
+              </div>
+              <div class="lab-links">
+                <a
+                  href="labs/lab3.html"
+                  class="lab-link"
+                  aria-label="View CTF Challenge Environment Report"
+                >
+                  <i class="fas fa-eye"></i> View Report
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Writeups Section -->
+    <section id="writeups" aria-labelledby="writeups-heading">
+      <div class="container">
+        <h2 class="section-title" id="writeups-heading">Security Writeups</h2>
+        <div class="writeups-container">
+          <div class="writeup-search">
+            <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search writeups by title, category, or tags..."
+              id="searchInput"
+              aria-label="Search writeups"
+            />
+          </div>
+          <div class="writeups-list" id="writeupsList">
+            <div
+              class="writeup-item"
+              tabindex="0"
+              role="button"
+              aria-label="View SQL Injection Exploitation Techniques writeup"
+            >
+              <div class="writeup-title">
+                SQL Injection Exploitation Techniques
+              </div>
+              <div class="writeup-meta">
+                <span>Web Security</span>
+                <span>May 15, 2023</span>
+              </div>
+            </div>
+            <div
+              class="writeup-item"
+              tabindex="0"
+              role="button"
+              aria-label="View Buffer Overflow Walkthrough writeup"
+            >
+              <div class="writeup-title">Buffer Overflow Walkthrough</div>
+              <div class="writeup-meta">
+                <span>Binary Exploitation</span>
+                <span>Apr 28, 2023</span>
+              </div>
+            </div>
+            <div
+              class="writeup-item"
+              tabindex="0"
+              role="button"
+              aria-label="View XSS Vulnerabilities in Modern Web Apps writeup"
+            >
+              <div class="writeup-title">
+                XSS Vulnerabilities in Modern Web Apps
+              </div>
+              <div class="writeup-meta">
+                <span>Web Security</span>
+                <span>Apr 10, 2023</span>
+              </div>
+            </div>
+            <div
+              class="writeup-item"
+              tabindex="0"
+              role="button"
+              aria-label="View Cryptography Challenges in CTFs writeup"
+            >
+              <div class="writeup-title">Cryptography Challenges in CTFs</div>
+              <div class="writeup-meta">
+                <span>Cryptography</span>
+                <span>Mar 22, 2023</span>
+              </div>
+            </div>
+            <div
+              class="writeup-item"
+              tabindex="0"
+              role="button"
+              aria-label="View Network Pentesting Methodology writeup"
+            >
+              <div class="writeup-title">Network Pentesting Methodology</div>
+              <div class="writeup-meta">
+                <span>Network Security</span>
+                <span>Mar 5, 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="section-title" id="contact-heading">Get In Touch</h2>
+        <p
+          style="
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          I'm always interested in new opportunities, collaborations, or just
+          having a chat about cybersecurity. Feel free to reach out through any
+          of the channels below!
+        </p>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div>Email</div>
+                <a
+                  href="mailto:mahmoudtamerali@gmail.com"
+                  aria-label="Send email to mahmoudtamerali@gmail.com"
+                >
+                  mahmoudtamerali@gmail.com
+                </a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div>Location</div>
+                <div>Cairo, Egypt</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div>LinkedIn</div>
+                <a
+                  href="https://linkedin.com/in/mahmoud-tamer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit LinkedIn profile"
+                >
+                  www.linkedin.com/in/mahmoud-tamer
+                </a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div>GitHub</div>
+                <a
+                  href="https://github.com/mahmoudtamerali"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit GitHub profile"
+                >
+                  www.github.com/mahmoudtamerali
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="social-links">
+          <a
+            href="https://linkedin.com/in/mahmoud-tamer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/mahmoudtamerali"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://tryhackme.com/p/mahmoud.tamer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TryHackMe"
+          >
+            <i class="fas fa-user-secret"></i>
+          </a>
+        </div>
+        <p>© 2023 Mahmoud Tamer. All rights reserved.</p>
+        <p>
+          Designed and built with
+          <i class="fas fa-heart" style="color: #e63946" aria-hidden="true"></i>
+          for cybersecurity
+        </p>
+      </div>
+    </footer>
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="modal"
+      onclick="closeModal()"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <button
+        class="modal-close"
+        onclick="closeModal()"
+        aria-label="Close modal"
+      >
+        &times;
+      </button>
+      <img id="modal-img" src="" alt="Certificate preview" />
+      <div class="modal-caption"></div>
+    </div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Toast notification -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
