@@ -275,6 +275,94 @@
     color: var(--muted);
     margin: 0;
 }
+
+/* Code element styling */
+code {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+/* Code blocks with pre */
+pre code {
+  display: block;
+  padding: 15px;
+  background-color: #1e1e2e;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid var(--accent-color);
+}
+
+/* For inline code in headings */
+h2 code, h3 code, h4 code {
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: rgba(30, 30, 46, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: rgba(230, 57, 70, 0.2);
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+td {
+  color: var(--text-secondary);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Zebra striping for better readability */
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  th, td {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
 /* Responsive for lab1.html */
 @media (max-width: 992px) {
     .lab-detail-grid {
