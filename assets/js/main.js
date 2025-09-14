@@ -1,26 +1,48 @@
-// Mobile menu toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
-
-// Initialize mobile menu button aria-expanded
-if (mobileMenuBtn) {
-    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+// Mobile menu functionality for lab pages
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
     
-    mobileMenuBtn.addEventListener('click', function() {
-        navLinks.classList.toggle('open');
-        const isExpanded = navLinks.classList.contains('open');
-        mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
-    });
-}
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        }
-    });
+    if (mobileMenuBtn && navLinks) {
+        // Set initial state
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('open');
+            const isOpen = navLinks.classList.contains('open');
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+            
+            // Prevent body scroll when menu is open
+            if (isOpen) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navItems = navLinks.querySelectorAll('.nav-link');
+        navItems.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('open');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = navLinks.contains(event.target);
+            const isClickOnButton = mobileMenuBtn.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnButton && navLinks.classList.contains('open')) {
+                navLinks.classList.remove('open');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });
 
 // Modal functionality

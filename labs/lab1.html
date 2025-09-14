@@ -183,28 +183,6 @@
     <!-- Toast notification -->
     <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
 
-    <script>
-      // Function to hide loading screen
-      function hideLoadingScreen() {
-        const loadingScreen = document.getElementById("loadingScreen");
-        if (loadingScreen) {
-          loadingScreen.classList.add("hidden");
-        }
-      }
-
-      // Hide loading screen when page is fully loaded
-      window.addEventListener("load", function () {
-        setTimeout(hideLoadingScreen, 2000);
-        hideLoadingScreen();
-        document.querySelectorAll("section").forEach((section) => {
-          section.classList.add("visible");
-        });
-      });
-
-      // Also hide loading screen after DOM is loaded (as a backup)
-      document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(hideLoadingScreen, 500);
-      });
-    </script>
+    <script src="/assets/js/lab.js"></script>
   </body>
 </html>

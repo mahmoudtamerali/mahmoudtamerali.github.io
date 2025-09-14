@@ -41,7 +41,7 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: fadeIn 1s ease 0.3s both; /* Keep this as is */
+    animation: fadeIn 1s ease 0.3s both;
 }
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -51,18 +51,17 @@ h1 {
     font-size: 1.3rem;
     color: var(--muted);
     margin-bottom: 32px;
-    animation: fadeIn 1s ease 0.5s both; /* Keep this as is */
+    animation: fadeIn 1s ease 0.5s both;
 }
-/* Add animation to the paragraph */
 header p {
-    animation: fadeIn 1s ease 0.7s both; /* Add this line */
+    animation: fadeIn 1s ease 0.7s both;
 }
 .hero-buttons {
     display: flex;
     gap: 16px;
     justify-content: center;
     flex-wrap: wrap;
-    animation: fadeIn 1s ease 0.9s both; /* Update this from 0.7s to 0.9s */
+    animation: fadeIn 1s ease 0.9s both;
 }
 /* Sections */
 section {
@@ -107,10 +106,16 @@ section.visible {
 }
 /* About Section */
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+}
+.about-text {
+    text-align: left;
+    max-width: 600px;
 }
 .about-text p {
     margin-bottom: 20px;
@@ -118,7 +123,8 @@ section.visible {
     color: var(--text-secondary);
 }
 .about-image {
-    width: 65%;
+    width: 100%;
+    max-width: 500px;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
@@ -132,12 +138,13 @@ section.visible {
 .about-image:hover img {
     transform: scale(1.05);
 }
-
 /* Skills */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .skill-category {
     background: var(--glass);
@@ -178,10 +185,14 @@ section.visible {
 /* Certificates */
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
     gap: 24px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .certificate-card {
+    width: 280px;
     text-align: center;
     transition: all 0.3s ease;
     background: var(--card);
@@ -225,8 +236,11 @@ section.visible {
     flex-direction: column;
     gap: 30px;
     margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.project-card {
+.project-card, .lab-card {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
@@ -236,85 +250,65 @@ section.visible {
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
-.project-card:hover {
+.project-card:hover, .lab-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--hover-shadow);
 }
-.project-image {
+.project-image, .lab-image {
     width: 100%;
-    height: 200px;
+    max-height: 300px;
+    height: auto;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
     transition: transform 0.5s ease;
 }
-.project-card:hover .project-image {
-    transform: scale(1.05);
+.project-card:hover .project-image, 
+.lab-card:hover .lab-image {
+    transform: scale(1.02);
 }
-.project-content {
+.project-content, .lab-content {
     padding: 24px;
     color: var(--text-primary);
 }
-.project-title {
+.project-title, .lab-title {
     font-size: 1.5rem;
     margin-bottom: 12px;
     color: var(--accent);
 }
-.project-description {
+.project-description, .lab-description {
     font-size: 1rem;
     margin-bottom: 16px;
     color: var(--text-secondary);
 }
-.project-tags {
+.project-tags, .lab-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 16px;
 }
-.project-tag {
+.project-tag, .lab-tag {
     background: rgba(100, 255, 218, 0.1);
     color: var(--accent);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-}
-@media (max-width: 768px) {
-    .project-card {
-        flex-direction: column;
-    }
-    .project-image {
-        width: 100%;
-        height: auto;
-        min-height: auto;
-    }
-    .project-content {
-        padding: 16px;
-    }
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
 }
 .labs-preview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-bottom: 40px;
-}
-.project-card img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-}
-.lab-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 }
 .section-cta {
     text-align: center;
     margin-top: 40px;
 }
 /* Projects */
-.projects-filter,
-.labs-filter {
+.projects-filter, .labs-filter {
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -330,77 +324,17 @@ section.visible {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.filter-btn:hover,
-.filter-btn.active {
+.filter-btn:hover, .filter-btn.active {
     background: var(--glass);
     color: var(--accent);
     border-color: var(--accent);
 }
-.projects-grid,
-.labs-grid {
+.projects-grid, .labs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
-}
-.project-card,
-.lab-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    height: 100%;
-    background: var(--card);
-    box-shadow: var(--card-shadow);
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-}
-.project-card:hover,
-.lab-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--hover-shadow);
-}
-.project-image,
-.lab-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-.project-card:hover .project-image,
-.lab-card:hover .lab-image {
-    transform: scale(1.05);
-}
-.project-content,
-.lab-content {
-    padding: 24px;
-    color: var(--text-primary);
-    flex: 1;
-}
-.project-title,
-.lab-title {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-    color: var(--accent);
-}
-.project-description,
-.lab-description {
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-    color: var(--text-secondary);
-}
-.project-tags,
-.lab-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 16px;
-}
-.project-tag,
-.lab-tag {
-    background: rgba(100, 255, 218, 0.1);
-    color: var(--accent);
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.8rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 /* Writeups */
 .writeups-container {
@@ -409,6 +343,8 @@ section.visible {
     padding: 30px;
     border: 1px solid var(--border-color);
     box-shadow: var(--card-shadow);
+    max-width: 800px;
+    margin: 0 auto;
 }
 .writeup-search {
     margin-bottom: 24px;
@@ -550,37 +486,13 @@ textarea.form-control {
 .form-group.error .form-error {
     display: block;
 }
-/* Responsive for index.html */
-@media (max-width: 992px) {
-    .about-content,
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-    .section-title {
-        font-size: 2rem;
-    }
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 /* Buttons */
-
-/* Project and Lab Links */
-.project-links,
-.lab-links {
+.project-links, .lab-links {
     display: flex;
     gap: 12px;
     margin-top: 16px;
 }
-.project-link,
-.lab-link {
+.project-link, .lab-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -592,16 +504,378 @@ textarea.form-control {
     font-size: 0.9rem;
     transition: all 0.3s ease;
 }
-.project-link:hover,
-.lab-link:hover {
+.project-link:hover, .lab-link:hover {
     background: rgba(100, 255, 218, 0.2);
     transform: translateY(-2px);
 }
-.project-link.github-link,
-.lab-link.github-link {
+.project-link.github-link, .lab-link.github-link {
     background: rgba(24, 23, 23, 0.3);
 }
-.project-link.github-link:hover,
-.lab-link.github-link:hover {
+.project-link.github-link:hover, .lab-link.github-link:hover {
     background: rgba(24, 23, 23, 0.5);
+}
+
+/* Responsive adjustments */
+/* Small screens (540px and below) */
+@media (max-width: 540px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-content {
+        gap: 30px;
+    }
+    
+    .about-text {
+        max-width: 100%;
+    }
+    
+    .about-image {
+        max-width: 100%;
+    }
+    
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certificate-card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .projects-grid, .labs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card, .lab-card {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .labs-preview {
+        grid-template-columns: 1fr;
+    }
+    
+    .lab-card {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .writeups-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+    
+    .contact-container {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+}
+
+/* Medium small screens (541px - 768px) */
+@media (min-width: 541px) and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    /* Increased font sizes for 768px */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .about-text p, .project-description, .lab-description {
+        font-size: 1.1rem;
+    }
+    
+    .project-title, .lab-title {
+        font-size: 1.4rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-text {
+        max-width: 500px;
+    }
+    
+    .about-image {
+        max-width: 400px;
+    }
+    
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+    }
+    
+    .certificate-card {
+        width: 100%;
+    }
+    
+    .projects-grid, .labs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+    
+    .labs-preview {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+        justify-content: center;
+    }
+    
+    .writeups-container {
+        max-width: 600px;
+    }
+    
+    .contact-container {
+        max-width: 600px;
+    }
+}
+
+/* Medium screens (769px - 853px) */
+@media (min-width: 769px) and (max-width: 853px) {
+    .container {
+        padding: 0 25px;
+    }
+    
+    /* Increased font sizes for 820px */
+    h1 {
+        font-size: 2.7rem;
+    }
+    
+    .section-title {
+        font-size: 2.3rem;
+    }
+    
+    .about-text p, .project-description, .lab-description {
+        font-size: 1.15rem;
+    }
+    
+    .project-title, .lab-title {
+        font-size: 1.45rem;
+    }
+    
+    .about-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .about-text {
+        max-width: 450px;
+    }
+    
+    .about-image {
+        max-width: 350px;
+    }
+    
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 650px;
+    }
+    
+    .certificate-card {
+        width: 100%;
+    }
+    
+    .projects-grid, .labs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 750px;
+    }
+    
+    .labs-preview {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 750px;
+        justify-content: center;
+    }
+    
+    .writeups-container {
+        max-width: 700px;
+    }
+    
+    .contact-container {
+        max-width: 650px;
+    }
+}
+
+/* Medium large screens (854px - 912px) */
+@media (min-width: 854px) and (max-width: 912px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .about-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .about-text {
+        max-width: 500px;
+    }
+    
+    .about-image {
+        max-width: 400px;
+    }
+    
+    .certificates-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+    }
+    
+    .certificate-card {
+        width: 100%;
+    }
+    
+    .projects-grid, .labs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 850px;
+    }
+    
+    .labs-preview {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 850px;
+        justify-content: center;
+    }
+    
+    .writeups-container {
+        max-width: 750px;
+    }
+    
+    .contact-container {
+        max-width: 700px;
+    }
+}
+
+/* Large medium screens (913px - 1024px) */
+@media (min-width: 913px) and (max-width: 1024px) {
+    .container {
+        padding: 0 35px;
+    }
+    
+    /* Increased font sizes for 1024px */
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.4rem;
+    }
+    
+    .about-text p, .project-description, .lab-description {
+        font-size: 1.2rem;
+    }
+    
+    .project-title, .lab-title {
+        font-size: 1.5rem;
+    }
+    
+    .about-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+    
+    .about-text {
+        max-width: 550px;
+    }
+    
+    .about-image {
+        max-width: 450px;
+    }
+    
+    .certificates-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 950px;
+    }
+    
+    .certificate-card {
+        width: 100%;
+    }
+    
+    .projects-grid, .labs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 950px;
+    }
+    
+    .labs-preview {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 950px;
+        justify-content: center;
+    }
+    
+    .writeups-container {
+        max-width: 800px;
+    }
+    
+    .contact-container {
+        max-width: 750px;
+    }
+}
+
+/* Large screens (1025px and above) */
+@media (min-width: 1025px) {
+    .container {
+        padding: 0 40px;
+    }
+    
+    .about-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+    
+    .about-text {
+        max-width: 600px;
+    }
+    
+    .about-image {
+        max-width: 500px;
+    }
+    
+    .certificates-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+    }
+    
+    .certificate-card {
+        width: 100%;
+    }
+    
+    .projects-grid, .labs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1000px;
+    }
+    
+    .labs-preview {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+        justify-content: center;
+    }
+    
+    .writeups-container {
+        max-width: 800px;
+    }
+    
+    .contact-container {
+        max-width: 700px;
+    }
 }
