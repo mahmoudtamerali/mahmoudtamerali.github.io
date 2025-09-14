@@ -1,42 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Web Application Security Lab | Mahmoud Tamer</title>
-    <meta
-      name="description"
-      content="Hands-on lab environment for practicing web application penetration testing techniques including SQL injection, XSS, and CSRF vulnerabilities."
-    />
-    <meta
-      property="og:title"
-      content="Web Application Security Lab | Mahmoud Tamer"
-    />
-    <meta
-      property="og:description"
-      content="Hands-on lab environment for practicing web application penetration testing techniques."
-    />
+    <title>[LAB_TITLE] | Mahmoud Tamer</title>
+    <meta name="description" content="[LAB_DESCRIPTION]" />
+    <meta property="og:title" content="[LAB_TITLE] | Mahmoud Tamer" />
+    <meta property="og:description" content="[LAB_DESCRIPTION]" />
     <meta property="og:type" content="article" />
-    <meta
-      property="og:url"
-      content="https://mahmoudtamerali.github.io/labs/lab1.html"
-    />
-    <meta
-      property="og:image"
-      content="https://picsum.photos/seed/websecurity/1200/630.jpg"
-    />
+    <meta property="og:url" content="https://mahmoudtamerali.github.io/labs/[LAB_SLUG].html" />
+    <meta property="og:image" content="https://picsum.photos/seed/[LAB_SEED]/1200/630.jpg" />
     <link rel="icon" href="/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="/assets/css/common.css">
     <link rel="stylesheet" href="/assets/css/lab.css">
-  </head>
-  <body>
+</head>
+<body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
-      <div class="loader"></div>
+        <div class="loader"></div>
     </div>
 
     <!-- Skip to content link for accessibility -->
@@ -44,480 +26,175 @@
 
     <!-- Navigation -->
     <nav role="navigation" aria-label="Main navigation">
-      <div class="container nav-container">
-        <a href="/" class="logo" aria-label="Mahmoud Tamer Home">MT</a>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/#home" class="nav-link">Home</a></li>
-          <li><a href="/#about" class="nav-link">About</a></li>
-          <li><a href="/#skills" class="nav-link">Skills</a></li>
-          <li>
-            <a href="/#featured-projects" class="nav-link">Projects</a>
-          </li>
-          <li><a href="/#featured-labs" class="nav-link active">Labs</a></li>
-          <li>
-            <a href="/#certificates" class="nav-link">Certificates</a>
-          </li>
-          <li><a href="/#writeups" class="nav-link">Writeups</a></li>
-          <li><a href="/#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <button
-          class="mobile-menu-btn"
-          id="mobileMenuBtn"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="Mahmoud Tamer Home">MT</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/#home" class="nav-link">Home</a></li>
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#skills" class="nav-link">Skills</a></li>
+                <li><a href="/#featured-projects" class="nav-link">Projects</a></li>
+                <li><a href="/#featured-labs" class="nav-link active">Labs</a></li>
+                <li><a href="/#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="/#writeups" class="nav-link">Writeups</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
     <!-- Lab Header -->
     <header class="lab-header">
-      <div class="container lab-header-content">
-        <div class="lab-header-text">
-          <h1>Web Application Security Lab</h1>
-          <p>
-            Hands-on lab environment for practicing web application penetration
-            testing techniques including SQL injection, XSS, and CSRF
-            vulnerabilities.
-          </p>
-          <div class="lab-meta">
-            <span class="lab-category">Web Security</span>
-            <span class="lab-difficulty">Intermediate</span>
-          </div>
-          <div class="lab-links-header">
-            <a
-              href="https://github.com/mahmoudtamerali/web-security-lab"
-              target="_blank"
-              class="btn"
-              ><i class="fab fa-github"></i> GitHub</a
-            >
-          </div>
+        <div class="container lab-header-content">
+            <div class="lab-header-text">
+                <h1>[LAB_TITLE]</h1>
+                <p>[LAB_SHORT_DESCRIPTION]</p>
+                <div class="lab-meta">
+                    <span class="lab-category">[LAB_CATEGORY]</span>
+                    <span class="lab-difficulty">[LAB_DIFFICULTY]</span>
+                </div>
+                <div class="lab-links-header">
+                    <a href="[GITHUB_URL]" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                    <!-- Add more links as needed -->
+                </div>
+            </div>
+            <div class="lab-header-image">
+                <img src="https://picsum.photos/seed/[LAB_SEED]/600/400.jpg" alt="[LAB_TITLE]">
+            </div>
         </div>
-        <div class="lab-header-image">
-          <img
-            src="https://picsum.photos/seed/websecurity/600/400.jpg"
-            alt="Web Application Security Lab"
-          />
-        </div>
-      </div>
     </header>
 
     <!-- Lab Detail Section -->
     <main id="main-content" class="lab-detail">
-      <div class="container">
-        <div class="lab-detail-grid">
-          <div class="lab-main-content">
-            <section class="lab-section">
-              <h2>Lab Overview</h2>
-              <p>
-                This lab provides a comprehensive environment for learning and
-                practicing web application security testing techniques. Designed
-                for intermediate-level security enthusiasts, the lab includes
-                multiple vulnerable web applications that simulate real-world
-                scenarios encountered during penetration testing engagements.
-              </p>
-              <p>
-                The lab environment is structured to allow progressive learning,
-                starting with basic vulnerabilities and advancing to more
-                complex attack chains. Each vulnerability is intentionally
-                implemented to provide hands-on experience in identifying,
-                exploiting, and remediating security flaws.
-              </p>
-            </section>
-
-            <section class="lab-section">
-              <h2>Lab Environment</h2>
-              <p>
-                The lab consists of multiple virtual machines and containers
-                configured to simulate a realistic web application
-                infrastructure:
-              </p>
-              <ul>
-                <li>
-                  <strong>Web Server:</strong> Apache/Nginx with PHP/Python
-                  backend
-                </li>
-                <li>
-                  <strong>Database:</strong> MySQL/MongoDB with intentionally
-                  misconfigured permissions
-                </li>
-                <li>
-                  <strong>Applications:</strong> Multiple vulnerable web apps
-                  including custom-built and open-source vulnerable applications
-                </li>
-                <li>
-                  <strong>Network:</strong> Simulated corporate network with
-                  firewall rules and segmentation
-                </li>
-              </ul>
-              <p>
-                All components are containerized using Docker for easy
-                deployment and reset, allowing learners to experiment freely
-                without concerns about permanently damaging the environment.
-              </p>
-            </section>
-
-            <section class="lab-section">
-              <h2>Challenges</h2>
-              <p>
-                The lab includes a variety of challenges covering the OWASP Top
-                10 vulnerabilities:
-              </p>
-              <div class="challenges-list">
-                <div class="challenge-item">
-                  <h3>Injection Vulnerabilities</h3>
-                  <ul>
-                    <li>SQL Injection (Error-based, Blind, Union-based)</li>
-                    <li>Command Injection</li>
-                    <li>LDAP Injection</li>
-                    <li>NoSQL Injection</li>
-                  </ul>
+        <div class="container">
+            <div class="lab-detail-grid">
+                <div class="lab-main-content">
+                    <!-- LAB_SECTIONS -->
+                    <!-- Add more sections as needed -->
                 </div>
-                <div class="challenge-item">
-                  <h3>Authentication & Session Management</h3>
-                  <ul>
-                    <li>Broken Authentication</li>
-                    <li>Session Fixation</li>
-                    <li>Insecure Token Generation</li>
-                  </ul>
-                </div>
-                <div class="challenge-item">
-                  <h3>Cross-Site Scripting (XSS)</h3>
-                  <ul>
-                    <li>Reflected XSS</li>
-                    <li>Stored XSS</li>
-                    <li>DOM-based XSS</li>
-                  </ul>
-                </div>
-                <div class="challenge-item">
-                  <h3>Security Misconfigurations</h3>
-                  <ul>
-                    <li>Default Credentials</li>
-                    <li>Verbose Error Messages</li>
-                    <li>Unnecessary Services</li>
-                  </ul>
-                </div>
-                <div class="challenge-item">
-                  <h3>Cross-Site Request Forgery (CSRF)</h3>
-                  <ul>
-                    <li>Basic CSRF</li>
-                    <li>Token-based Bypass</li>
-                  </ul>
-                </div>
-                <div class="challenge-item">
-                  <h3>Advanced Vulnerabilities</h3>
-                  <ul>
-                    <li>XXE (XML External Entity)</li>
-                    <li>SSRF (Server-Side Request Forgery)</li>
-                    <li>File Inclusion (LFI/RFI)</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            <section class="lab-section">
-              <h2>Learning Objectives</h2>
-              <p>Upon completion of this lab, learners will be able to:</p>
-              <div class="learning-path">
-                <div class="path-step active">
-                  <div class="step-number">1</div>
-                  <div class="step-content">
-                    <h4>Identify Vulnerabilities</h4>
-                    <p>
-                      Recognize various web application vulnerabilities through
-                      manual testing and automated scanning
-                    </p>
-                  </div>
-                </div>
-                <div class="path-step active">
-                  <div class="step-number">2</div>
-                  <div class="step-content">
-                    <h4>Exploit Vulnerabilities</h4>
-                    <p>
-                      Develop and execute exploits for identified
-                      vulnerabilities using appropriate tools and techniques
-                    </p>
-                  </div>
-                </div>
-                <div class="path-step active">
-                  <div class="step-number">3</div>
-                  <div class="step-content">
-                    <h4>Document Findings</h4>
-                    <p>
-                      Properly document vulnerabilities with clear steps to
-                      reproduce and evidence of exploitation
-                    </p>
-                  </div>
-                </div>
-                <div class="path-step">
-                  <div class="step-number">4</div>
-                  <div class="step-content">
-                    <h4>Recommend Remediations</h4>
-                    <p>
-                      Provide effective remediation strategies for identified
-                      vulnerabilities
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section class="lab-section">
-              <h2>Tools Used</h2>
-              <div class="tools-grid">
-                <div class="tool-item">
-                  <i class="fas fa-spider" aria-hidden="true"></i>
-                  <div>
-                    <h3>Burp Suite</h3>
-                    <p>
-                      Web proxy for intercepting and modifying HTTP requests
-                    </p>
-                  </div>
-                </div>
-                <div class="tool-item">
-                  <i class="fas fa-database" aria-hidden="true"></i>
-                  <div>
-                    <h3>SQLMap</h3>
-                    <p>Automated SQL injection tool</p>
-                  </div>
-                </div>
-                <div class="tool-item">
-                  <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                  <div>
-                    <h3>OWASP ZAP</h3>
-                    <p>Web application security scanner</p>
-                  </div>
-                </div>
-                <div class="tool-item">
-                  <i class="fas fa-terminal" aria-hidden="true"></i>
-                  <div>
-                    <h3>cURL</h3>
-                    <p>Command-line tool for making HTTP requests</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section class="lab-section">
-              <h2>Results</h2>
-              <p>
-                This lab has been successfully used by over 50 students and
-                security professionals to enhance their web application security
-                skills. Key outcomes include:
-              </p>
-              <ul>
-                <li>
-                  95% of participants demonstrated improved vulnerability
-                  identification skills
-                </li>
-                <li>
-                  87% successfully exploited at least one high-severity
-                  vulnerability
-                </li>
-                <li>
-                  78% showed improved ability to document findings according to
-                  industry standards
-                </li>
-                <li>
-                  Several participants reported applying these skills in
-                  real-world penetration tests
-                </li>
-              </ul>
-              <p>
-                The lab continues to be updated with new challenges and
-                vulnerabilities to reflect emerging threats and attack
-                techniques.
-              </p>
-            </section>
-          </div>
-
-          <aside class="lab-sidebar">
-            <div class="sidebar-section">
-              <h3>Lab Details</h3>
-              <ul class="lab-details-list">
-                <li>
-                  <span class="detail-label">Duration:</span>
-                  <span class="detail-value">2 weeks</span>
-                </li>
-                <li>
-                  <span class="detail-label">Difficulty:</span>
-                  <span class="detail-value">Intermediate</span>
-                </li>
-                <li>
-                  <span class="detail-label">Platform:</span>
-                  <span class="detail-value">Local VM</span>
-                </li>
-                <li>
-                  <span class="detail-label">Tools:</span>
-                  <span class="detail-value"
-                    >Burp Suite, SQLMap, OWASP ZAP</span
-                  >
-                </li>
-              </ul>
+                
+                <aside class="lab-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Lab Details</h3>
+                        <ul class="lab-details-list">
+                            <li>
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value">[LAB_DURATION]</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Difficulty:</span>
+                                <span class="detail-value">[LAB_DIFFICULTY]</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Platform:</span>
+                                <span class="detail-value">[LAB_PLATFORM]</span>
+                            </li>
+                            <li>
+                                <span class="detail-label">Tools:</span>
+                                <span class="detail-value">[LAB_TOOLS]</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <!-- Add tech tags here -->
+                            <span class="tech-tag">[TECHNOLOGY_1]</span>
+                            <span class="tech-tag">[TECHNOLOGY_2]</span>
+                            <span class="tech-tag">[TECHNOLOGY_3]</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Lab Gallery</h3>
+                        <div class="lab-gallery">
+                            <!-- Add gallery images here -->
+                            <img src="https://picsum.photos/seed/[LAB_SEED]1/300/200.jpg" alt="[LAB_TITLE]" onclick="openModal(this.src)">
+                            <img src="https://picsum.photos/seed/[LAB_SEED]2/300/200.jpg" alt="[LAB_TITLE]" onclick="openModal(this.src)">
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Related Labs</h3>
+                        <div class="related-labs">
+                            <!-- Add related labs here -->
+                            <div class="related-lab">
+                                <img src="https://picsum.photos/seed/[RELATED_LAB_SEED]/80/80.jpg" alt="[RELATED_LAB_TITLE]">
+                                <div>
+                                    <h4>[RELATED_LAB_TITLE]</h4>
+                                    <p>[RELATED_LAB_DESCRIPTION]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
             </div>
-
-            <div class="sidebar-section">
-              <h3>Technologies Used</h3>
-              <div class="tech-tags">
-                <span class="tech-tag">DVWA</span>
-                <span class="tech-tag">OWASP Juice Shop</span>
-                <span class="tech-tag">Burp Suite</span>
-                <span class="tech-tag">SQLMap</span>
-                <span class="tech-tag">OWASP ZAP</span>
-              </div>
-            </div>
-
-            <div class="sidebar-section">
-              <h3>Lab Gallery</h3>
-              <div class="lab-gallery">
-                <img
-                  src="https://picsum.photos/seed/websec1/300/200.jpg"
-                  alt="Lab environment setup"
-                  onclick="openModal(this.src)"
-                />
-                <img
-                  src="https://picsum.photos/seed/websec2/300/200.jpg"
-                  alt="Vulnerability exploitation"
-                  onclick="openModal(this.src)"
-                />
-                <img
-                  src="https://picsum.photos/seed/websec3/300/200.jpg"
-                  alt="Remediation techniques"
-                  onclick="openModal(this.src)"
-                />
-                <img
-                  src="https://picsum.photos/seed/websec4/300/200.jpg"
-                  alt="Security testing results"
-                  onclick="openModal(this.src)"
-                />
-              </div>
-            </div>
-
-            <div class="sidebar-section">
-              <h3>Related Labs</h3>
-              <div class="related-labs">
-                <div class="related-lab">
-                  <img
-                    src="https://picsum.photos/seed/networkpentest/80/80.jpg"
-                    alt="Network Penetration Testing Lab"
-                  />
-                  <div>
-                    <h4>Network Penetration Testing Lab</h4>
-                    <p>
-                      Complete network infrastructure for practicing pentesting
-                    </p>
-                  </div>
-                </div>
-                <div class="related-lab">
-                  <img
-                    src="https://picsum.photos/seed/ctfenv/80/80.jpg"
-                    alt="CTF Challenge Environment"
-                  />
-                  <div>
-                    <h4>CTF Challenge Environment</h4>
-                    <p>Custom-built CTF challenges in various categories</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </aside>
         </div>
-      </div>
     </main>
 
     <!-- Footer -->
     <footer role="contentinfo">
-      <div class="container">
-        <div class="social-links">
-          <a
-            href="https://linkedin.com/in/mahmoud-tamer"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/mahmoudtamerali"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://tryhackme.com/p/mahmoud.tamer"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TryHackMe"
-          >
-            <i class="fas fa-user-secret"></i>
-          </a>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/mahmoud-tamer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/mahmoudtamerali" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://tryhackme.com/p/mahmoud.tamer" target="_blank" rel="noopener noreferrer" aria-label="TryHackMe">
+                    <i class="fas fa-user-secret"></i>
+                </a>
+            </div>
+            <p>© 2023 Mahmoud Tamer. All rights reserved.</p>
+            <p>
+                Designed and built with
+                <i class="fas fa-heart" style="color: #e63946" aria-hidden="true"></i>
+                for cybersecurity
+            </p>
         </div>
-        <p>© 2023 Mahmoud Tamer. All rights reserved.</p>
-        <p>
-          Designed and built with
-          <i class="fas fa-heart" style="color: #e63946" aria-hidden="true"></i>
-          for cybersecurity
-        </p>
-      </div>
     </footer>
 
     <!-- Modal -->
-    <div
-      id="modal"
-      class="modal"
-      onclick="closeModal()"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modal-title"
-    >
-      <button
-        class="modal-close"
-        onclick="closeModal()"
-        aria-label="Close modal"
-      >
-        &times;
-      </button>
-      <img id="modal-img" src="" alt="Certificate preview" />
+    <div id="modal" class="modal" onclick="closeModal()" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+            &times;
+        </button>
+        <img id="modal-img" src="" alt="Lab preview" />
     </div>
 
     <!-- Back to top button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
-      <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Toast notification -->
     <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
 
     <script>
-      // Function to hide loading screen
-      function hideLoadingScreen() {
-        const loadingScreen = document.getElementById("loadingScreen");
-        if (loadingScreen) {
-          loadingScreen.classList.add("hidden");
+        // Function to hide loading screen
+        function hideLoadingScreen() {
+            const loadingScreen = document.getElementById("loadingScreen");
+            if (loadingScreen) {
+                loadingScreen.classList.add("hidden");
+            }
         }
-      }
-
-      // Hide loading screen when page is fully loaded
-      window.addEventListener("load", function () {
-        // Fallback: Hide loading screen after 2 seconds
-        setTimeout(hideLoadingScreen, 2000);
-
-        // Also try to hide it immediately
-        hideLoadingScreen();
-
-        // Make all sections visible
-        document.querySelectorAll("section").forEach((section) => {
-          section.classList.add("visible");
+        
+        // Hide loading screen when page is fully loaded
+        window.addEventListener("load", function () {
+            setTimeout(hideLoadingScreen, 2000);
+            hideLoadingScreen();
+            document.querySelectorAll("section").forEach((section) => {
+                section.classList.add("visible");
+            });
         });
-      });
-
-      // Also hide loading screen after DOM is loaded (as a backup)
-      document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(hideLoadingScreen, 500);
-      });
+        
+        // Also hide loading screen after DOM is loaded (as a backup)
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(hideLoadingScreen, 500);
+        });
     </script>
-  </body>
+</body>
 </html>
