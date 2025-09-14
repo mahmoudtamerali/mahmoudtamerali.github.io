@@ -1,0 +1,326 @@
+/* Page Headers */
+.page-header,
+.lab-header {
+    padding: 120px 0 60px;
+    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), 
+                url('https://picsum.photos/seed/cybersecurity/1920/600.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+.page-header h1,
+.lab-header h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    color: white;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    color: white;
+}
+.page-header p,
+.lab-header-text p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+/* Project and Lab Detail Pages */
+.lab-header-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.lab-header-image img {
+    width: 100%;
+    border-radius: 12px;
+    border: 3px solid var(--accent);
+    box-shadow: var(--hover-shadow);
+}
+.lab-meta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.lab-category,
+.lab-difficulty {
+    background: var(--glass);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+.lab-links-header {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.lab-detail {
+    padding: 80px 0;
+}
+.lab-detail-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+.lab-section {
+    margin-bottom: 40px;
+}
+.lab-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+    position: relative;
+    padding-bottom: 10px;
+}
+.lab-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+}
+.lab-section p {
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+.lab-section ul,
+.lab-section ol {
+    margin-left: 20px;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+.lab-section li {
+    margin-bottom: 8px;
+}
+.lab-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+.sidebar-section {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+}
+.sidebar-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    color: var(--accent);
+    position: relative;
+    padding-bottom: 10px;
+}
+.sidebar-section h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+}
+.lab-details-list {
+    list-style: none;
+}
+.lab-details-list li {
+    display: flex;
+    margin-bottom: 12px;
+}
+.detail-label {
+    font-weight: 600;
+    width: 120px;
+    color: var(--muted);
+}
+.detail-value {
+    flex: 1;
+    color: var(--text-secondary);
+}
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.tech-tag {
+    background: var(--glass);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+}
+.lab-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+.lab-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.lab-gallery img:hover {
+    transform: scale(1.03);
+    border-color: var(--accent);
+}
+.related-labs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.related-lab {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: var(--glass);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.related-lab:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateX(5px);
+}
+.related-lab img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.related-lab h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: var(--accent);
+}
+.related-lab p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+}
+.challenges-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.challenge-item {
+    background: var(--glass);
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+}
+.challenge-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--accent);
+}
+.challenge-item ul {
+    list-style: none;
+    margin-left: 0;
+}
+.challenge-item li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+.challenge-item li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+.learning-path {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.path-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--glass);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+.path-step.active {
+    border-color: var(--accent);
+    background: rgba(100, 255, 218, 0.1);
+}
+.path-step:hover {
+    transform: translateX(5px);
+}
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--glass);
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+.path-step.active .step-number {
+    background: var(--accent);
+    color: var(--bg);
+}
+.step-content h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+.step-content p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+}
+/* Responsive for lab1.html */
+@media (max-width: 992px) {
+    .lab-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .lab-header-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .lab-sidebar {
+        position: static;
+    }
+    
+    .challenges-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1, .lab-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .lab-links-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lab-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .lab-detail-grid {
+        gap: 24px;
+    }
+}
