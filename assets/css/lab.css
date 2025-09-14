@@ -275,7 +275,6 @@
     color: var(--muted);
     margin: 0;
 }
-
 /* Code element styling */
 code {
   background-color: rgba(255, 255, 255, 0.1);
@@ -287,7 +286,6 @@ code {
   display: inline-block;
   line-height: 1.4;
 }
-
 /* Code blocks with pre */
 pre code {
   display: block;
@@ -297,15 +295,13 @@ pre code {
   overflow-x: auto;
   margin: 15px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  border-left: 4px solid var(--accent-color);
+  border-left: 4px solid var(--accent);
 }
-
 /* For inline code in headings */
 h2 code, h3 code, h4 code {
   font-size: 0.8em;
   vertical-align: middle;
 }
-
 /* Table styling */
 table {
   width: 100%;
@@ -316,13 +312,11 @@ table {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
 th, td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid var(--border-color);
 }
-
 th {
   background-color: rgba(230, 57, 70, 0.2);
   color: var(--text-color);
@@ -331,24 +325,19 @@ th {
   font-size: 0.85rem;
   letter-spacing: 0.5px;
 }
-
 td {
   color: var(--text-secondary);
 }
-
 tr:last-child td {
   border-bottom: none;
 }
-
 tr:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
-
 /* Zebra striping for better readability */
 tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.02);
 }
-
 /* Responsive table */
 @media (max-width: 768px) {
   table {
@@ -361,6 +350,93 @@ tr:nth-child(even) {
     padding: 8px 12px;
     font-size: 0.9rem;
   }
+}
+
+/* Enhanced image styling */
+.lab-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+}
+
+.lab-section img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
+}
+
+/* Image container for better control */
+.image-container {
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.02);
+}
+
+/* Image caption styling */
+.image-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Download button styling */
+.download-section {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: var(--glass);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(100, 255, 218, 0.3);
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(100, 255, 218, 0.4);
+    background: rgba(100, 255, 218, 0.9);
+}
+
+.download-btn i {
+    font-size: 1.2rem;
+}
+
+.download-note {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.9rem;
 }
 
 /* Responsive for lab1.html */
@@ -381,17 +457,20 @@ tr:nth-child(even) {
         grid-template-columns: 1fr;
     }
 }
-
 @media (max-width: 768px) {
     .page-header h1, .lab-header h1 {
         font-size: 2.2rem;
     }
-
     .lab-gallery {
         grid-template-columns: 1fr;
     }
-
     .lab-detail-grid {
         gap: 24px;
+    }
+    
+    /* Enhanced image responsiveness */
+    .lab-section img {
+        max-height: 400px;
+        object-fit: contain;
     }
 }
