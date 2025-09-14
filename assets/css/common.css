@@ -334,20 +334,6 @@ footer {
     border-left: 4px solid #ff6b6b;
 }
 
-/* Image loading styles */
-img {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-img.loaded {
-    opacity: 1;
-}
-.priority-load {
-    opacity: 1 !important;
-}
-.hidden {
-    display: none;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
