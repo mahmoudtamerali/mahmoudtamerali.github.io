@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>[LAB_TITLE] | Mahmoud Tamer</title>
@@ -8,17 +8,26 @@
     <meta property="og:title" content="[LAB_TITLE] | Mahmoud Tamer" />
     <meta property="og:description" content="[LAB_DESCRIPTION]" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://mahmoudtamerali.github.io/labs/[LAB_SLUG].html" />
-    <meta property="og:image" content="https://picsum.photos/seed/[LAB_SEED]/1200/630.jpg" />
+    <meta
+      property="og:url"
+      content="https://mahmoudtamerali.github.io/labs/[LAB_SLUG].html"
+    />
+    <meta
+      property="og:image"
+      content="https://picsum.photos/seed/[LAB_SEED]/1200/630.jpg"
+    />
     <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/common.css">
-    <link rel="stylesheet" href="/assets/css/lab.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/lab.css" />
+  </head>
+  <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
 
     <!-- Skip to content link for accessibility -->
@@ -26,172 +35,210 @@
 
     <!-- Navigation -->
     <nav role="navigation" aria-label="Main navigation">
-        <div class="container nav-container">
-            <a href="/" class="logo" aria-label="Mahmoud Tamer Home">MT</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/#home" class="nav-link">Home</a></li>
-                <li><a href="/#about" class="nav-link">About</a></li>
-                <li><a href="/#skills" class="nav-link">Skills</a></li>
-                <li><a href="/#featured-projects" class="nav-link">Projects</a></li>
-                <li><a href="/#featured-labs" class="nav-link active">Labs</a></li>
-                <li><a href="/#certificates" class="nav-link">Certificates</a></li>
-                <li><a href="/#writeups" class="nav-link">Writeups</a></li>
-                <li><a href="/#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+      <div class="container nav-container">
+        <a href="/" class="logo" aria-label="Mahmoud Tamer Home">MT</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/#home" class="nav-link">Home</a></li>
+          <li><a href="/#about" class="nav-link">About</a></li>
+          <li><a href="/#skills" class="nav-link">Skills</a></li>
+          <li><a href="/#featured-projects" class="nav-link">Projects</a></li>
+          <li><a href="/#featured-labs" class="nav-link active">Labs</a></li>
+          <li><a href="/#certificates" class="nav-link">Certificates</a></li>
+          <li><a href="/#writeups" class="nav-link">Writeups</a></li>
+          <li><a href="/#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
 
     <!-- Lab Header -->
     <header class="lab-header">
-        <div class="container lab-header-content">
-            <div class="lab-header-text">
-                <h1>[LAB_TITLE]</h1>
-                <p>[LAB_SHORT_DESCRIPTION]</p>
-                <div class="lab-meta">
-                    <span class="lab-category">[LAB_CATEGORY]</span>
-                    <span class="lab-difficulty">[LAB_DIFFICULTY]</span>
-                </div>
-                <div class="lab-links-header">
-                    <a href="[GITHUB_URL]" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
-                    <!-- Add more links as needed -->
-                </div>
-            </div>
+      <div class="container lab-header-content">
+        <div class="lab-header-text">
+          <h1>[LAB_TITLE]</h1>
+          <p>[LAB_SHORT_DESCRIPTION]</p>
+          <div class="lab-meta">
+            <span class="lab-category">[LAB_CATEGORY]</span>
+            <span class="lab-difficulty">[LAB_DIFFICULTY]</span>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Lab Detail Section -->
     <main id="main-content" class="lab-detail">
-        <div class="container">
-            <div class="lab-detail-grid">
-                <div class="lab-main-content">
-                    <!-- LAB_SECTIONS -->
-                    <!-- Add more sections as needed -->
-                </div>
-                
-                <aside class="lab-sidebar">
-                    <div class="sidebar-section">
-                        <h3>Lab Details</h3>
-                        <ul class="lab-details-list">
-                            <li>
-                                <span class="detail-label">Duration:</span>
-                                <span class="detail-value">[LAB_DURATION]</span>
-                            </li>
-                            <li>
-                                <span class="detail-label">Difficulty:</span>
-                                <span class="detail-value">[LAB_DIFFICULTY]</span>
-                            </li>
-                            <li>
-                                <span class="detail-label">Platform:</span>
-                                <span class="detail-value">[LAB_PLATFORM]</span>
-                            </li>
-                            <li>
-                                <span class="detail-label">Tools:</span>
-                                <span class="detail-value">[LAB_TOOLS]</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Technologies Used</h3>
-                        <div class="tech-tags">
-                            <!-- Add tech tags here -->
-                            <span class="tech-tag">[TECHNOLOGY_1]</span>
-                            <span class="tech-tag">[TECHNOLOGY_2]</span>
-                            <span class="tech-tag">[TECHNOLOGY_3]</span>
-                        </div>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Lab Gallery</h3>
-                        <div class="lab-gallery">
-                            <!-- Add gallery images here -->
-                            <img src="https://picsum.photos/seed/[LAB_SEED]1/300/200.jpg" alt="[LAB_TITLE]" onclick="openModal(this.src)">
-                            <img src="https://picsum.photos/seed/[LAB_SEED]2/300/200.jpg" alt="[LAB_TITLE]" onclick="openModal(this.src)">
-                        </div>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Related Labs</h3>
-                        <div class="related-labs">
-                            <!-- Add related labs here -->
-                            <div class="related-lab">
-                                <img src="https://picsum.photos/seed/[RELATED_LAB_SEED]/80/80.jpg" alt="[RELATED_LAB_TITLE]">
-                                <div>
-                                    <h4>[RELATED_LAB_TITLE]</h4>
-                                    <p>[RELATED_LAB_DESCRIPTION]</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+      <div class="container">
+        <div class="lab-detail-grid">
+          <div class="lab-main-content">
+            <!-- LAB_SECTIONS -->
+            <!-- Add more sections as needed -->
+          </div>
+
+          <aside class="lab-sidebar">
+            <div class="sidebar-section">
+              <h3>Lab Details</h3>
+              <ul class="lab-details-list">
+                <li>
+                  <span class="detail-label">Duration:</span>
+                  <span class="detail-value">[LAB_DURATION]</span>
+                </li>
+                <li>
+                  <span class="detail-label">Difficulty:</span>
+                  <span class="detail-value">[LAB_DIFFICULTY]</span>
+                </li>
+                <li>
+                  <span class="detail-label">Platform:</span>
+                  <span class="detail-value">[LAB_PLATFORM]</span>
+                </li>
+                <li>
+                  <span class="detail-label">Tools:</span>
+                  <span class="detail-value">[LAB_TOOLS]</span>
+                </li>
+              </ul>
             </div>
+
+            <div class="sidebar-section">
+              <h3>Technologies Used</h3>
+              <div class="tech-tags">
+                <!-- Add tech tags here -->
+                <span class="tech-tag">[TECHNOLOGY_1]</span>
+                <span class="tech-tag">[TECHNOLOGY_2]</span>
+                <span class="tech-tag">[TECHNOLOGY_3]</span>
+              </div>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Lab Gallery</h3>
+              <div class="lab-gallery">
+                <!-- Add gallery images here -->
+                <img
+                  src="https://picsum.photos/seed/[LAB_SEED]1/300/200.jpg"
+                  alt="[LAB_TITLE]"
+                  onclick="openModal(this.src)"
+                />
+                <img
+                  src="https://picsum.photos/seed/[LAB_SEED]2/300/200.jpg"
+                  alt="[LAB_TITLE]"
+                  onclick="openModal(this.src)"
+                />
+              </div>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Related Labs</h3>
+              <div class="related-labs">
+                <!-- Add related labs here -->
+                <div class="related-lab">
+                  <img
+                    src="https://picsum.photos/seed/[RELATED_LAB_SEED]/80/80.jpg"
+                    alt="[RELATED_LAB_TITLE]"
+                  />
+                  <div>
+                    <h4>[RELATED_LAB_TITLE]</h4>
+                    <p>[RELATED_LAB_DESCRIPTION]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer role="contentinfo">
-        <div class="container">
-            <div class="social-links">
-                <a href="https://linkedin.com/in/mahmoud-tamer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/mahmoudtamerali" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://tryhackme.com/p/mahmoud.tamer" target="_blank" rel="noopener noreferrer" aria-label="TryHackMe">
-                    <i class="fas fa-user-secret"></i>
-                </a>
-            </div>
-            <p>© 2023 Mahmoud Tamer. All rights reserved.</p>
-            <p>
-                Designed and built with
-                <i class="fas fa-heart" style="color: #e63946" aria-hidden="true"></i>
-                for cybersecurity
-            </p>
+      <div class="container">
+        <div class="social-links">
+          <a
+            href="https://linkedin.com/in/mahmoud-tamer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/mahmoudtamerali"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://tryhackme.com/p/mahmoud.tamer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TryHackMe"
+          >
+            <i class="fas fa-user-secret"></i>
+          </a>
         </div>
+        <p>© 2023 Mahmoud Tamer. All rights reserved.</p>
+        <p>
+          Designed and built with
+          <i class="fas fa-heart" style="color: #e63946" aria-hidden="true"></i>
+          for cybersecurity
+        </p>
+      </div>
     </footer>
 
     <!-- Modal -->
-    <div id="modal" class="modal" onclick="closeModal()" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
-            &times;
-        </button>
-        <img id="modal-img" src="" alt="Lab preview" />
+    <div
+      id="modal"
+      class="modal"
+      onclick="closeModal()"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <button
+        class="modal-close"
+        onclick="closeModal()"
+        aria-label="Close modal"
+      >
+        &times;
+      </button>
+      <img id="modal-img" src="" alt="Lab preview" />
     </div>
 
     <!-- Back to top button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Toast notification -->
     <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
 
     <script>
-        // Function to hide loading screen
-        function hideLoadingScreen() {
-            const loadingScreen = document.getElementById("loadingScreen");
-            if (loadingScreen) {
-                loadingScreen.classList.add("hidden");
-            }
+      // Function to hide loading screen
+      function hideLoadingScreen() {
+        const loadingScreen = document.getElementById("loadingScreen");
+        if (loadingScreen) {
+          loadingScreen.classList.add("hidden");
         }
-        
-        // Hide loading screen when page is fully loaded
-        window.addEventListener("load", function () {
-            setTimeout(hideLoadingScreen, 2000);
-            hideLoadingScreen();
-            document.querySelectorAll("section").forEach((section) => {
-                section.classList.add("visible");
-            });
+      }
+
+      // Hide loading screen when page is fully loaded
+      window.addEventListener("load", function () {
+        setTimeout(hideLoadingScreen, 2000);
+        hideLoadingScreen();
+        document.querySelectorAll("section").forEach((section) => {
+          section.classList.add("visible");
         });
-        
-        // Also hide loading screen after DOM is loaded (as a backup)
-        document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(hideLoadingScreen, 500);
-        });
+      });
+
+      // Also hide loading screen after DOM is loaded (as a backup)
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(hideLoadingScreen, 500);
+      });
     </script>
-</body>
+  </body>
 </html>
