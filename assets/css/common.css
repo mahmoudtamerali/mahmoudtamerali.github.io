@@ -116,43 +116,6 @@ nav {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-/* Buttons */
-
-/* Project and Lab Links */
-.project-links,
-.lab-links {
-    display: flex;
-    gap: 12px;
-    margin-top: 16px;
-}
-.project-link,
-.lab-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
-    background: var(--glass);
-    color: var(--accent);
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-.project-link:hover,
-.lab-link:hover {
-    background: rgba(100, 255, 218, 0.2);
-    transform: translateY(-2px);
-}
-.project-link.github-link,
-.lab-link.github-link {
-    background: rgba(24, 23, 23, 0.3);
-}
-.project-link.github-link:hover,
-.lab-link.github-link:hover {
-    background: rgba(24, 23, 23, 0.5);
-}
-
 /* Footer */
 footer {
     padding: 40px 0;
