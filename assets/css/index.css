@@ -118,6 +118,7 @@ section.visible {
     color: var(--text-secondary);
 }
 .about-image {
+    width: 65%;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
