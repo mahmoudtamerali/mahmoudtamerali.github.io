@@ -354,7 +354,7 @@ section.visible {
     font-size: 0.9rem;
 }
 
-/* Featured Projects and Labs */
+/* Featured Projects and Writeups */
 .projects-preview {
     display: flex;
     flex-direction: column;
@@ -364,7 +364,7 @@ section.visible {
     margin-left: auto;
     margin-right: auto;
 }
-.project-card, .lab-card {
+.project-card, .writeup-card {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
@@ -374,11 +374,11 @@ section.visible {
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
-.project-card:hover, .lab-card:hover {
+.project-card:hover, .writeup-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--hover-shadow);
 }
-.project-image, .lab-image {
+.project-image, .writeup-image {
     width: 100%;
     max-height: 300px;
     height: auto;
@@ -386,38 +386,38 @@ section.visible {
     border-radius: 12px 12px 0 0;
     transition: transform 0.5s ease;
 }
-.project-card:hover .project-image, 
-.lab-card:hover .lab-image {
+.project-card:hover .project-image,
+.writeup-card:hover .writeup-image {
     transform: scale(1.02);
 }
-.project-content, .lab-content {
+.project-content, .writeup-content {
     padding: 24px;
     color: var(--text-primary);
 }
-.project-title, .lab-title {
+.project-title, .writeup-title {
     font-size: 1.5rem;
     margin-bottom: 12px;
     color: var(--accent);
 }
-.project-description, .lab-description {
+.project-description, .writeup-description {
     font-size: 1rem;
     margin-bottom: 16px;
     color: var(--text-secondary);
 }
-.project-tags, .lab-tags {
+.project-tags, .writeup-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 16px;
 }
-.project-tag, .lab-tag {
+.project-tag, .writeup-tag {
     background: rgba(100, 255, 218, 0.1);
     color: var(--accent);
     padding: 4px 10px;
     border-radius: 4px;
     font-size: 0.8rem;
 }
-.labs-preview {
+.writeups-preview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
@@ -433,7 +433,7 @@ section.visible {
 }
 
 /* Projects */
-.projects-filter, .labs-filter {
+.projects-filter, .writeups-filter {
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -454,7 +454,7 @@ section.visible {
     color: var(--accent);
     border-color: var(--accent);
 }
-.projects-grid, .labs-grid {
+.projects-grid, .writeups-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
@@ -551,12 +551,12 @@ textarea.form-control {
 }
 
 /* Buttons */
-.project-links, .lab-links {
+.project-links, .writeup-links {
     display: flex;
     gap: 12px;
     margin-top: 16px;
 }
-.project-link, .lab-link {
+.project-link, .writeup-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -568,14 +568,14 @@ textarea.form-control {
     font-size: 0.9rem;
     transition: all 0.3s ease;
 }
-.project-link:hover, .lab-link:hover {
+.project-link:hover, .writeup-link:hover {
     background: rgba(100, 255, 218, 0.2);
     transform: translateY(-2px);
 }
-.project-link.github-link, .lab-link.github-link {
+.project-link.github-link, .writeup-link.github-link {
     background: rgba(24, 23, 23, 0.3);
 }
-.project-link.github-link:hover, .lab-link.github-link:hover {
+.project-link.github-link:hover, .writeup-link.github-link:hover {
     background: rgba(24, 23, 23, 0.5);
 }
 
@@ -757,7 +757,7 @@ footer {
     .about-image {
         max-width: 100%;
     }
-    .projects-grid, .labs-grid {
+    .projects-grid, .writeups-grid {
         grid-template-columns: 1fr;
     }
     .certificates-grid {
@@ -776,16 +776,16 @@ footer {
     .section-title {
         font-size: 1.8rem;
     }
-    .about-text p, .project-description, .lab-description {
+    .about-text p, .project-description, .writeup-description {
         font-size: 1rem;
     }
-    .project-title, .lab-title {
+    .project-title, .writeup-title {
         font-size: 1.3rem;
     }
     .certificates-grid {
         grid-template-columns: 1fr;
     }
-    .labs-preview {
+    .writeups-preview {
         grid-template-columns: 1fr;
     }
     .contact-container {
@@ -807,10 +807,10 @@ footer {
     .certificates-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .projects-grid, .labs-grid {
+    .projects-grid, .writeups-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    .labs-preview {
+    .writeups-preview {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -829,7 +829,7 @@ footer {
     .certificates-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .labs-preview {
+    .writeups-preview {
         grid-template-columns: repeat(3, 1fr);
     }
 }

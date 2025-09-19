@@ -1,4 +1,4 @@
-// Mobile menu functionality for lab pages
+// Mobile menu functionality for writeup pages
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
@@ -82,7 +82,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Projects filter functionality
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
-const labCards = document.querySelectorAll('.lab-card');
+const writeupCards = document.querySelectorAll('.writeup-card');
 if (filterBtns.length > 0) {
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -90,9 +90,9 @@ if (filterBtns.length > 0) {
             filterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
-            // Filter projects/labs
+            // Filter projects/writeups
             const filter = this.getAttribute('data-filter');
-            
+
             if (projectCards.length > 0) {
                 projectCards.forEach(card => {
                     if (filter === 'all' || card.getAttribute('data-category') === filter) {
@@ -102,9 +102,9 @@ if (filterBtns.length > 0) {
                     }
                 });
             }
-            
-            if (labCards.length > 0) {
-                labCards.forEach(card => {
+
+            if (writeupCards.length > 0) {
+                writeupCards.forEach(card => {
                     if (filter === 'all' || card.getAttribute('data-category') === filter) {
                         card.style.display = '';
                     } else {
