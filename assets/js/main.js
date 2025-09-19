@@ -79,26 +79,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Search functionality for writeups
-const searchInput = document.getElementById('searchInput');
-const writeupsList = document.getElementById('writeupsList');
-if (searchInput && writeupsList) {
-    const writeups = writeupsList.getElementsByClassName('writeup-item');
-    
-    searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase();
-        Array.from(writeups).forEach(writeup => {
-            const title = writeup.querySelector('.writeup-title').textContent.toLowerCase();
-            const meta = writeup.querySelector('.writeup-meta').textContent.toLowerCase();
-            if (title.includes(searchTerm) || meta.includes(searchTerm)) {
-                writeup.style.display = '';
-            } else {
-                writeup.style.display = 'none';
-            }
-        });
-    });
-}
-
 // Projects filter functionality
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
@@ -227,23 +207,6 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
-});
-
-// Writeup item click handler
-document.querySelectorAll('.writeup-item').forEach(item => {
-    item.addEventListener('click', function() {
-        const title = this.querySelector('.writeup-title').textContent;
-        showToast(`Opening writeup: ${title}`, 'success');
-        // In a real implementation, this would navigate to the writeup
-    });
-    
-    // Keyboard accessibility
-    item.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            this.click();
-        }
-    });
 });
 
 // Function to load lazy images

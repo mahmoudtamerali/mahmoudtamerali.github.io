@@ -1,2 +1,5 @@
-remove temporal labs and projects
-tune the skills
+- [x] Remove writeups navigation link from index.html
+- [x] Remove writeups section from index.html
+- [x] Remove writeups search functionality from main.js
+- [x] Remove writeups click handlers from main.js
+- [x] Remove writeups styles from index.css

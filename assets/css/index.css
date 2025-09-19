@@ -462,70 +462,6 @@ section.visible {
     margin: 0 auto;
 }
 
-/* Writeups */
-.writeups-container {
-    background: var(--card);
-    border-radius: 12px;
-    padding: 30px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--card-shadow);
-    max-width: 800px;
-    margin: 0 auto;
-}
-.writeup-search {
-    margin-bottom: 24px;
-    position: relative;
-}
-.search-input {
-    width: 100%;
-    padding: 14px 20px 14px 50px;
-    background: var(--glass);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    color: var(--text-primary);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-.search-input:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
-}
-.search-icon {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--muted);
-}
-.writeups-list {
-    display: grid;
-    gap: 16px;
-}
-.writeup-item {
-    padding: 16px;
-    background: var(--glass);
-    border-radius: 8px;
-    border-left: 3px solid var(--accent);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-.writeup-item:hover {
-    background: rgba(100, 255, 218, 0.1);
-    transform: translateX(5px);
-}
-.writeup-title {
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: var(--accent);
-}
-.writeup-meta {
-    display: flex;
-    justify-content: space-between;
-    color: var(--muted);
-    font-size: 0.9rem;
-}
-
 /* Contact */
 .contact-container {
     display: flex;
@@ -851,9 +787,6 @@ footer {
     }
     .labs-preview {
         grid-template-columns: 1fr;
-    }
-    .writeups-container {
-        padding: 20px;
     }
     .contact-container {
         padding: 30px 20px;
